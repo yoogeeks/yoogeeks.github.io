@@ -7,6 +7,7 @@ this.addEventListener('install', function(event) {
         '/404.html',
         '/cover.png',
         '/favicon.jpg',
+        '/img/umanggupta_img_sprite.png',
         '/img/github.png',
         '/img/google_plus_b.png',
         '/img/linkedin_b.png',
