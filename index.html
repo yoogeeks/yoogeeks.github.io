@@ -15,8 +15,15 @@
         <script src="js/Script.js"></script>
         <script>
             if ('serviceWorker' in navigator) {
-                navigator.serviceWorker.register('/service-worker.js', {scope: '/'}).then(function(registration) {
-                    window.alert('success')
+                navigator.serviceWorker.register('/service-worker.js', {scope: '/'})
+                .then(function(registration) {
+                    if(registration.installing) {
+                      console.log('Service worker installing');
+                    } else if(registration.waiting) {
+                      console.log('Service worker installed');
+                    } else if(registration.active) {
+                      console.log('Service worker active');
+                    }
                 }).catch(function(error) {
                     window.alert(error)
                 })
