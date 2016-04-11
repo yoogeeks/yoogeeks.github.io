@@ -1,4 +1,4 @@
-angular.module('ugApp', ['ngRoute', 'ngResource', 'ngCookies'])
+angular.module('ugApp', ['ngRoute', 'ngResource', 'ngCookies', 'ui.bootstrap'])
 .config(function ($routeProvider, $locationProvider) {
   $locationProvider.html5Mode(true);
   $routeProvider
@@ -79,12 +79,34 @@ angular.module('ugApp', ['ngRoute', 'ngResource', 'ngCookies'])
   }
 })
 .controller('mainController', function ($scope, $location, $route, $cookies, $anchorScroll, translationService) {
+  $scope.alerts = []
   //$('html,body').animate({ scrollTop: $('#cover').offset().top }, "slow");
   if (!$scope.translation)
     translationService.getTranslation(function(data) {
       $scope.translation = data;
       $scope.text = data[$cookies.lang]
     });
+
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js', {scope: '/'})
+    .then(function(registration) {
+        if(registration.installing) {
+          console.log('Service worker installing');
+        } else if(registration.waiting) {
+          console.log('Service worker installed');
+        } else if(registration.active) {
+          console.log('Service worker active');
+          $scope.alerts.push(
+            { type: 'success', msg: 'This site is now available offline' }
+          );
+        }
+    }).catch(function(error) {
+    })
+  }
+
+  $scope.alerts.push(
+    { type: 'info', msg: 'I use cookies to store your language prefrence' }
+  );
 
   $scope.getClass = function (path) {
     if ($location.path() == path) {
