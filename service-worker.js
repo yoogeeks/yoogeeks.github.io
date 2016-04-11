@@ -2,10 +2,11 @@ this.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('v1').then(function(cache) {
       return cache.addAll([
-        'index.html',
-        '404.html',
-        'cover.png',
-        'favicon.png',
+        '/',
+        '/index.html',
+        '/404.html',
+        '/cover.png',
+        '/favicon.png',
         '/img/github.png',
         '/img/google_plus_b.png',
         '/img/linkedin_b.png',
