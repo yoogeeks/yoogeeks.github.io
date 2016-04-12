@@ -1,4 +1,4 @@
-angular.module('ugApp', ['ngRoute', 'ngResource', 'ngCookies', 'ui.bootstrap'])
+angular.module('ugApp', ['ngRoute', 'ngResource', 'ngCookies'])
 .config(function ($routeProvider, $locationProvider) {
   $locationProvider.html5Mode(true);
   $routeProvider
@@ -96,17 +96,13 @@ angular.module('ugApp', ['ngRoute', 'ngResource', 'ngCookies', 'ui.bootstrap'])
           console.log('Service worker installed');
         } else if(registration.active) {
           console.log('Service worker active');
-          $scope.alerts.push(
-            { type: 'success', msg: 'This site is now available offline' }
-          );
+          $scope.offline_alert = 'This site is now available offline';
         }
     }).catch(function(error) {
     })
   }
 
-  $scope.alerts.push(
-    { type: 'info', msg: 'I use cookies to store your language prefrence' }
-  );
+  $scope.cookie_alert = 'I use cookies to store your language prefrence';
 
   $scope.getClass = function (path) {
     if ($location.path() == path) {
