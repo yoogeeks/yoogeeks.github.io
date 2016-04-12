@@ -27,8 +27,8 @@ angular.module('ugApp', ['ngRoute', 'ngResource', 'ngCookies'])
 
 })
 .service('translationService', function ($resource, $cookies) {
-  if (!$cookies.lang)
-    $cookies.lang = 'en';
+  if (!$cookies.get('lang'))
+    $cookies.put('lang', 'en');
   this.getTranslation = function (callback) {
     $resource('lang/lang.json').get(callback);
   };
@@ -84,7 +84,7 @@ angular.module('ugApp', ['ngRoute', 'ngResource', 'ngCookies'])
   if (!$scope.translation)
     translationService.getTranslation(function(data) {
       $scope.translation = data;
-      $scope.text = data[$cookies.lang]
+      $scope.text = data[$cookies.get('lang')]
     });
 
   if ('serviceWorker' in navigator) {
@@ -115,21 +115,21 @@ angular.module('ugApp', ['ngRoute', 'ngResource', 'ngCookies'])
   }
 
   $scope.changeLang = function () {
-    if ($cookies.lang == 'en')
-      $cookies.lang = 'fr';
+    if ($cookies.get('lang') == 'en')
+      $cookies.put('lang', 'fr');
     else
-      $cookies.lang = 'en';
+      $cookies.put('lang', 'en');
 
-    $scope.text = $scope.translation[$cookies.lang]
+    $scope.text = $scope.translation[$cookies.get('lang')]
   }
   $scope.otherLang = function () {
-    if ($cookies.lang == 'en')
+    if ($cookies.get('lang') == 'en')
       $scope.text.CURRENT_LANG = 'fr';
     else
       $scope.text.CURRENT_LANG = 'en';
   }
   $scope.curLang = function () {
-    if ($cookies.lang == 'en')
+    if ($cookies.get('lang') == 'en')
       $scope.text.CURRENT_LANG = 'en';
     else
       $scope.text.CURRENT_LANG = 'fr';
@@ -156,7 +156,7 @@ angular.module('ugApp', ['ngRoute', 'ngResource', 'ngCookies'])
       element.height(element.width() * 0.4326923076923077);
       $window.addEventListener('resize', function () {
         element.height(element.width() * 0.4326923076923077);
-        if ($cookies.lang == 'fr') {
+        if ($cookies.get('lang') == 'fr') {
           element.css({
             "background-position": "0px 0px"
           });
@@ -173,7 +173,7 @@ angular.module('ugApp', ['ngRoute', 'ngResource', 'ngCookies'])
       }, false);
       scope.$watch(
         function () {
-          if ($cookies.lang == 'fr') {
+          if ($cookies.get('lang') == 'fr') {
             element.css({
               "background-position": "0px 0px"
             });
