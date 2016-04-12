@@ -42,13 +42,13 @@
             <a ng-click="changeLang()" ng-mouseenter="otherLang()" ng-mouseleave="curLang()" title="{{text.CHANGE_LANG}}"><span>{{text.CURRENT_LANG}}</span></a>
         </span>
 
-        <div class="alert alert-info alert-dismissible" role="alert" style="position: fixed;bottom: -20px;height: 40px;padding-top: 8px;left: 30%;right: 30%">
+        <div class="popup alert alert-info alert-dismissible" role="alert">
           <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          {{cookie_alert}}
+          {{text.COOKIE_ALERT}}
         </div>
-        <div class="alert alert-info alert-dismissible" role="alert" ng-show="offline_alert" style="position: fixed;bottom: -20px;height: 40px;padding-top: 8px;left: 30%;right: 30%">
+        <div class="popup alert alert-info alert-dismissible" role="alert" ng-show="offline_alert">
           <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          {{offline_alert}}
+          {{text.OFFLINE_ALERT}}
         </div>
     </body>
 </html>

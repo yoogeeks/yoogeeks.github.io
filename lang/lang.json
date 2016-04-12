@@ -21,7 +21,9 @@
             "LANGUAGES": "Languages",
             "DEVWWEB": "Web Development",
             "DEVMOB": "Mobile Applications on",
-            "DBMS" :  "DBMS"
+            "DBMS" :  "DBMS",
+            "COOKIE_ALERT" : "I use cookies to store your language prefrence",
+            "OFFLINE_ALERT" : "This site is now available offline"
           },
   "fr":  {
             "STATUS": "Developpeur Informatique",
@@ -45,6 +47,8 @@
             "LANGUAGES": "Langages",
             "DEVWWEB": "Développement web",
             "DEVMOB": "Applications mobiles sur",
-            "DBMS" :  "SGBD"
+            "DBMS" :  "SGBD",
+            "COOKIE_ALERT" : "J'utilises cookies pour stocker vos prefrence de langue",
+            "OFFLINE_ALERT" : "Ce site est maintenant disponible hors-internet"
           }
 }

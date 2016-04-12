@@ -92,7 +92,7 @@ angular.module('ugApp', ['ngRoute', 'ngResource', 'ngCookies'])
     .then(function(registration) {
         if(registration.installing) {
           console.log('Service worker installing');
-          $scope.offline_alert = 'This site is now available offline';
+          $scope.offline_alert = true;
         } else if(registration.waiting) {
           console.log('Service worker installed');          
         } else if(registration.active) {
@@ -101,8 +101,6 @@ angular.module('ugApp', ['ngRoute', 'ngResource', 'ngCookies'])
     }).catch(function(error) {
     })
   }
-
-  $scope.cookie_alert = 'I use cookies to store your language prefrence';
 
   $scope.getClass = function (path) {
     if ($location.path() == path) {

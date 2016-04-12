@@ -188,7 +188,7 @@ body {
 .main-nav {
     height: 42px;
     position: relative;
-    margin-top: -47px;
+    margin-top: -42px;
     font-size: 18px;        
     background-color : deepskyblue;  
     z-index : 10;  
@@ -258,6 +258,15 @@ ul li {
     height : 80%;
     min-height : 240px;
     min-width : 400px;
+}
+
+.popup {
+    position: fixed;
+    bottom: -20px;
+    height: 40px;
+    padding-top: 10px !important;
+    left: 30%;
+    right: 30%
 }
 
 ::selection {
