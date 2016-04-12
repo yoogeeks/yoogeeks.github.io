@@ -24,10 +24,6 @@
                 <p class="title-degree">{{text.DEGREE}}</p>
             </div>
         </div>
-        <div class="alert alert-info alert-dismissible" role="alert" ng-show="offline_alert" style="position: absolute;top: 0;display: inline-block;">
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          {{offline_alert}}
-        </div>
         <nav role='navigation' class="main-nav" id="main-nav">
             <ul id="menu-list">
                 <li id="menu-item" class="home"><a href="#" ng-class="getClass('/')" ng-click="scrollToTop('#cover')">{{text.HOME}}</a></li>
@@ -45,5 +41,14 @@
         <span class="lang">
             <a ng-click="changeLang()" ng-mouseenter="otherLang()" ng-mouseleave="curLang()" title="{{text.CHANGE_LANG}}"><span>{{text.CURRENT_LANG}}</span></a>
         </span>
+
+        <div class="alert alert-info alert-dismissible" role="alert" style="position: fixed;bottom: -20px;height: 40px;padding-top: 8px;left: 30%;right: 30%">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          {{cookie_alert}}
+        </div>
+        <div class="alert alert-info alert-dismissible" role="alert" ng-show="offline_alert" style="position: fixed;bottom: -20px;height: 40px;padding-top: 8px;left: 30%;right: 30%">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          {{offline_alert}}
+        </div>
     </body>
 </html>
