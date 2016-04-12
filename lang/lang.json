@@ -10,7 +10,7 @@
             "CURRENT_LANG": "en",
             "CHANGE_LANG": "Changer la langue",
             "GREETING": "Hello",
-            "BIO_1": "Software Engineer open for FullStack .NET/JavaScript Development roles",
+            "BIO_1": "Software Engineer, Davidson Technologies, Paris ",
             "BIO_2": "Jack of many trades, becoming their master one by one.",
             "DOWNLOAD_CV": "Download my complete CV",
             "DOWNLOAD_CV_PF": "Printer friendly",
@@ -22,7 +22,7 @@
             "DEVWWEB": "Web Development",
             "DEVMOB": "Mobile Applications on",
             "DBMS" :  "DBMS",
-            "COOKIE_ALERT" : "I use cookies to store your language prefrence",
+            "COOKIE_ALERT" : "This site use cookies to store your language prefrence",
             "OFFLINE_ALERT" : "This site is now available offline"
           },
   "fr":  {
@@ -36,7 +36,7 @@
             "CURRENT_LANG": "fr",
             "CHANGE_LANG": "Change language",
             "GREETING": "Bonjour",
-            "BIO_1": "Ingénieur informatique à la recherche d’une poste Développeur .NET / JavaScript",
+            "BIO_1": "Ingénieur d'Etudes, Informatique",
             "BIO_2": "Je parle 3 langues, et peux coder dans plus de 10",
             "DOWNLOAD_CV": "Télécharger mon CV complet",
             "DOWNLOAD_CV_PF": "Version imprimable",
@@ -48,7 +48,7 @@
             "DEVWWEB": "Développement web",
             "DEVMOB": "Applications mobiles sur",
             "DBMS" :  "SGBD",
-            "COOKIE_ALERT" : "J'utilises cookies pour stocker vos prefrence de langue",
-            "OFFLINE_ALERT" : "Ce site est maintenant disponible hors-internet"
+            "COOKIE_ALERT" : "Ce site utilise les cookies pour stocker votre préférence de langue",
+            "OFFLINE_ALERT" : "Ce site est maintenant disponible en mode déconnecté"
           }
 }
