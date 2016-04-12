@@ -262,7 +262,7 @@ ul li {
 
 .popup {
     position: fixed;
-    bottom: -20px;
+    bottom: -10px;
     height: 40px;
     padding-top: 10px !important;
     left: 30%;
