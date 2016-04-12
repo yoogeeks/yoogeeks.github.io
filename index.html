@@ -24,11 +24,7 @@
                 <p class="title-degree">{{text.DEGREE}}</p>
             </div>
         </div>
-        <div class="alert alert-info alert-dismissible" role="alert" style="position: absolute;bottom: 0;right:0;left:0;">
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          {{cookie_alert}}
-        </div>
-        <div class="alert alert-info alert-dismissible" role="alert" ng-show="offline_alert" style="position: absolute;top: 0;right:0;left:0;">
+        <div class="alert alert-info alert-dismissible" role="alert" ng-show="offline_alert" style="position: absolute;top: 0;display: inline-block;">
           <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           {{offline_alert}}
         </div>

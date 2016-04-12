@@ -92,11 +92,11 @@ angular.module('ugApp', ['ngRoute', 'ngResource', 'ngCookies'])
     .then(function(registration) {
         if(registration.installing) {
           console.log('Service worker installing');
+          $scope.offline_alert = 'This site is now available offline';
         } else if(registration.waiting) {
-          console.log('Service worker installed');
+          console.log('Service worker installed');          
         } else if(registration.active) {
           console.log('Service worker active');
-          $scope.offline_alert = 'This site is now available offline';
         }
     }).catch(function(error) {
     })
